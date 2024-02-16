@@ -2,12 +2,14 @@ import React, { useState } from "react";
 
 const App = () => {
   const [backgroundColor, setBackgroundColor] = useState("#FFFFFF");
+  const [isRunning, setIsRunning] = useState(false);
+
+  const beginColorChange = () => {
+    setIsRunning(!isRunning);
+  };
 
   const handleUserInput = (e) => {
     if (e.target.value.length > 7) return;
-
-    console.log(e.target.value);
-    console.log(backgroundColor);
 
     setBackgroundColor(e.target.value.toUpperCase());
   };
@@ -25,6 +27,9 @@ const App = () => {
           value={backgroundColor}
           onChange={handleUserInput}
         />
+        <button onClick={beginColorChange}>
+          {isRunning ? "Stop" : "Start"}
+        </button>
       </div>
     </div>
   );
