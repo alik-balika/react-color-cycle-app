@@ -2,3 +2,26 @@
   margin: 0;
   padding: 0;
 }
+
+.header {
+  padding: 20px;
+  background-color: aqua;
+}
+
+.options {
+  padding: 20px;
+  background-color: aqua;
+}
+
+label {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+input {
+  padding: 10px;
+  height: 30px;
+  font-size: 25px;
+  width: 110px;
+  border-radius: 5px;
+}
