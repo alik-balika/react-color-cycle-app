@@ -8,9 +8,14 @@
   background-color: aqua;
 }
 
+h2 {
+  margin-top: 10px;
+}
+
 .options {
-  padding: 20px;
+  padding-left: 20px;
   background-color: aqua;
+  display: flex;
 }
 
 label {
@@ -28,11 +33,11 @@ input {
 }
 
 button {
-  margin-left: 10px;
   padding: 10px;
   height: 53px;
   font-size: 25px;
   border-radius: 5px;
+  width: 135px;
   background-color: black;
   color: white;
   border: 2px solid white;
@@ -41,4 +46,12 @@ button {
 
 button:hover {
   background-color: darkslategrey;
+}
+
+.colorCode {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 300px;
+  width: 100%;
 }
