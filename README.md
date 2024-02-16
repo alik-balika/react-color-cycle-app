@@ -21,7 +21,7 @@ an RGB color specification (e.g. `#000000` color code).
 - [x] User can specify a starting fill color as a six hexadecimal standard
       CSS color code in three individual components of two digits each - red,
       blue, and green
-- [ ] User can specify an increment value for each color component that will
+- [x] User can specify an increment value for each color component that will
       be added to that component every .25 second
 - [ ] User can see the box containing the fill color change every .25 seconds
 - [ ] User can only change the color components and their increments when
