@@ -1,7 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
 
-const delay = 250;
-
 const App = () => {
   const [backgroundColor, setBackgroundColor] = useState("#FFFFFF");
   const [colorCodes, setColorCodes] = useState({
@@ -27,6 +25,7 @@ const App = () => {
       running: false,
     },
   });
+  const [delay, setDelay] = useState(250);
 
   useInterval(
     () => {
@@ -128,11 +127,24 @@ const App = () => {
     });
   };
 
+  const handleDelayInput = (delayValue) => {
+    if (isNaN(delayValue)) return;
+    setDelay(delayValue);
+  };
+
   return (
     <div style={{ height: "100vh", backgroundColor: backgroundColor }}>
       <div className="header">
         <h1>React Color Cycle App</h1>
-        <h2>Color: {backgroundColor}</h2>
+        <h2 style={{ marginBottom: "10px" }}>Color: {backgroundColor}</h2>
+        <label htmlFor="delay">Delay (ms) </label>
+        <input
+          type="text"
+          id="delay"
+          value={delay}
+          onChange={(e) => handleDelayInput(e.target.value)}
+          disabled={Object.keys(colorCodes).some((c) => colorCodes[c].running)}
+        />
       </div>
       <div className="options">
         {Object.keys(colorCodes).map((color) => {
